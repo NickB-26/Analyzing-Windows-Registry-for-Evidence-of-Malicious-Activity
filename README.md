@@ -51,41 +51,44 @@ In this project, we use **Volatility 3** to analyze a memory image from the **Me
 1. **Install Python** — Download from [python.org/downloads](https://python.org/downloads). During installation, tick **"Add Python to PATH"**.
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="Python download page at python.org" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/d222b941-5763-46d9-99fd-1dfb474af93c" alt="Python download page at python.org" width="700"><br>
   <em>Figure 1: Python download page at python.org</em>
 </p>
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="Python installer with Add Python to PATH ticked" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/0f098595-bbf1-4ad6-bd82-51aefe6c5714" alt="Python installer with Add Python to PATH ticked" width="700"><br>
   <em>Figure 2: Python installer — 'Add Python to PATH' must be ticked before installing</em>
 </p>
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="Python installation in progress" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/1492e24a-40bb-47c6-8bea-0d156a01ce2f" alt="Python installation in progress" width="700"><br>
   <em>Figure 3: Python installation in progress</em>
 </p>
 
 2. **Download Volatility 3** — Go to [github.com/volatilityfoundation/volatility3](https://github.com/volatilityfoundation/volatility3), click **Code → Download ZIP**, and extract to your Desktop.
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="Volatility 3 GitHub page showing Download ZIP option" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/837ea230-b646-4df6-bdbd-882762bc3e1a" alt="Volatility 3 GitHub page showing Download ZIP option" width="700"><br>
   <em>Figure 4: Downloading Volatility 3 from GitHub</em>
 </p>
 
+
 3. **Download the memory image** — On the MemLabs GitHub page, open **Lab 1** and click the download link to get `MemLabs-Lab1.7z`. Extract it to `C:\Users\nyco8\OneDrive\Desktop\MemLabs`.
 
+
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="MemLabs Lab 1 GitHub page" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/18283bcd-c4cd-42ef-9a83-aa9cf02afdce" alt="MemLabs Lab 1 GitHub page" width="700"><br>
   <em>Figure 5: MemLabs Lab 1 — Beginner's Luck challenge page on GitHub</em>
 </p>
 
+
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="MEGA download page for MemLabs-Lab1.7z" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/f6289550-d0ae-4d8f-8b8b-38065795f5bd" alt="MEGA download page for MemLabs-Lab1.7z" width="700"><br>
   <em>Figure 6: Downloading the memory image from MEGA</em>
 </p>
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="Extracting the memory image with 7-Zip" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/6a79a08c-1e28-4dc8-a248-c49833a63a2b" alt="Extracting the memory image with 7-Zip" width="700"><br>
   <em>Figure 7: Extracting MemLabs-Lab1.7z to the MemLabs folder</em>
 </p>
 
