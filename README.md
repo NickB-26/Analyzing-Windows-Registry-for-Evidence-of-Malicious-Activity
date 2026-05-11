@@ -1,0 +1,1 @@
+# Analyzing-Windows-Registry-for-Evidence-of-Malicious-Activity
