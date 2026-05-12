@@ -65,7 +65,7 @@ In this project, we use **Volatility 3** to analyze a memory image from the **Me
   <em>Figure 3: Python installation in progress</em>
 </p>
 
-2. **Download Volatility 3** — Go to [github.com/volatilityfoundation/volatility3](https://github.com/volatilityfoundation/volatility3), click **Code → Download ZIP**, and extract to your Desktop.
+2. **Download Volatility 3** — Go to [github.com/volatilityfoundation/volatility3](https://github.com/volatilityfoundation/volatility3), click **Code → Download ZIP**. I've extracted Volatility to my Desktop.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/837ea230-b646-4df6-bdbd-882762bc3e1a" alt="Volatility 3 GitHub page showing Download ZIP option" width="700"><br>
@@ -73,7 +73,7 @@ In this project, we use **Volatility 3** to analyze a memory image from the **Me
 </p>
 
 
-3. **Download the memory image** — On the MemLabs GitHub page, open **Lab 1** and click the download link to get `MemLabs-Lab1.7z`. Extract it to `C:\Users\nyco8\OneDrive\Desktop\MemLabs`.
+3. **Download the memory image** — On the MemLabs GitHub page, I've chosen **Lab 1** and click-ed the download link to get `MemLabs-Lab1.7z`. I've extracted it to `C:\Users\nyco8\OneDrive\Desktop\MemLabs`.
 
 
 <p align="center">
@@ -100,9 +100,10 @@ python vol.py -f "C:\Users\nyco8\OneDrive\Desktop\MemLabs\MemoryDump_Lab1.raw" w
 ```
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="windows.info output confirming the image is readable" width="700"><br>
-  <em>Figure 8: windows.info output — Windows 7, captured 2019-12-11</em>
+  <img src="https://github.com/user-attachments/assets/2d87c22e-8312-4b46-a901-4385c6a9b808" alt="windows.info output confirming the image is readable" width="700"><br>
+  <em>Figure 8: Reading the memory file</em>
 </p>
+
 
 5. **List all registry hives in memory** — Run `hivelist` to see every hive loaded at the time of the memory snapshot:
 
@@ -111,8 +112,8 @@ python vol.py -f "C:\Users\nyco8\OneDrive\Desktop\MemLabs\MemoryDump_Lab1.raw" w
 ```
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="hivelist output showing all registry hives in memory" width="700"><br>
-  <em>Figure 9: hivelist output — hives found include SAM, SYSTEM, SOFTWARE, and NTUSER.DAT for SmartNet and Alissa Simpson</em>
+  <img src="https://github.com/user-attachments/assets/15b86a16-8a02-4f92-80a1-d9e41b8a950c" alt="hivelist output showing all registry hives in memory" width="700"><br>
+  <em>Figure 9: Hivelist output — hives found include SAM, SYSTEM, SOFTWARE, and NTUSER.DAT for SmartNet and Alissa Simpson</em>
 </p>
 
 6. **Dump the hives to disk** — Save all hive files to an output folder for further analysis:
@@ -123,12 +124,13 @@ python vol.py -f "C:\Users\nyco8\OneDrive\Desktop\MemLabs\MemoryDump_Lab1.raw" -
 ```
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="Creating the output folder in Command Prompt" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/fb9330b3-8b8e-48b4-a163-58c8913b4b9b" alt="Creating the output folder in Command Prompt" width="700"><br>
   <em>Figure 10: Creating the output folder</em>
 </p>
 
+
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="hivelist --dump output showing all hives saved to disk" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/92415300-6aee-43cc-b4b1-abbd7516bd85" alt="hivelist --dump output showing all hives saved to disk" width="700"><br>
   <em>Figure 11: All registry hives successfully extracted to the output folder</em>
 </p>
 
@@ -146,8 +148,9 @@ python vol.py -f "C:\Users\nyco8\OneDrive\Desktop\MemLabs\MemoryDump_Lab1.raw" -
 python vol.py -f "C:\Users\nyco8\OneDrive\Desktop\MemLabs\MemoryDump_Lab1.raw" windows.registry.printkey --key "SAM\Domains\Account\Users\Names"
 ```
 
+
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="printkey output showing user account names from the SAM hive" width="700"><br>
+  <img src="https://github.com/user-attachments/assets/7c77290a-f4c2-472e-a22e-2f9d6fa3c734" alt="printkey output showing user account names from the SAM hive" width="700"><br>
   <em>Figure 12: User accounts extracted from the SAM hive</em>
 </p>
 
@@ -160,8 +163,8 @@ python vol.py -f "C:\Users\nyco8\OneDrive\Desktop\MemLabs\MemoryDump_Lab1.raw" w
 ```
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="Error showing windows.hashdump is not a valid plugin in Volatility 3" width="700"><br>
-  <em>Figure 13: windows.hashdump is not available in Volatility 3 — password hash extraction requires an alternative approach</em>
+  <img src="https://github.com/user-attachments/assets/cbf196b8-9c62-4d37-afe7-128e8db88e02" alt="Error showing windows.hashdump is not a valid plugin in Volatility 3" width="700"><br>
+  <em>Figure 13: Windows.hashdump is not available in Volatility 3 — password hash extraction requires an alternative approach</em>
 </p>
 
 > **Note:** Hash extraction via `impacket` was attempted but failed due to an OneDrive sync conflict on the Windows VM. This is documented as a known limitation in the Lessons Learned section.
@@ -181,13 +184,8 @@ python vol.py -f "C:\Users\nyco8\OneDrive\Desktop\MemLabs\MemoryDump_Lab1.raw" w
 ```
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="printkey output showing autorun entries in the SOFTWARE hive" width="700"><br>
-  <em>Figure 14: Autorun entries in the SOFTWARE hive</em>
-</p>
-
-<p align="center">
-  <img src="screenshots/placeholder.png" alt="Close-up of the VBoxTray autorun entry" width="700"><br>
-  <em>Figure 15: The only autorun entry found — VBoxTray.exe, a legitimate VirtualBox process</em>
+  <img src="https://github.com/user-attachments/assets/24f62d17-be69-4cf9-a498-e6b64bf5f239" alt="Close-up of the VBoxTray autorun entry" width="700"><br>
+  <em>Figure 14: The only autorun entry found — VBoxTray.exe, a legitimate VirtualBox process</em>
 </p>
 
 Only one entry was found: **VBoxTray** (`C:\Windows\system32\VBoxTray.exe`) — a legitimate VirtualBox guest additions process. No malicious autorun entries were present. All per-user `Run` keys for SmartNet and Alissa Simpson were empty.
@@ -207,8 +205,8 @@ python vol.py -f "C:\Users\nyco8\OneDrive\Desktop\MemLabs\MemoryDump_Lab1.raw" w
 ```
 
 <p align="center">
-  <img src="screenshots/placeholder.png" alt="UserAssist output showing recently accessed applications for both users" width="700"><br>
-  <em>Figure 16: UserAssist output — recently accessed applications for SmartNet and Alissa Simpson</em>
+  <img src="https://github.com/user-attachments/assets/30ba0d01-fbf6-46c1-8099-3ac9cf7a2eda" alt="UserAssist output showing recently accessed applications for both users" width="700"><br>
+  <em>Figure 15: UserAssist output — recently accessed applications for SmartNet and Alissa Simpson</em>
 </p>
 
 **SmartNet — key findings:**
@@ -278,7 +276,6 @@ The most suspicious finding is `st4G3$$1.bat` on SmartNet's Desktop — a batch 
 - **Volatility 3 plugin names aren't obvious.** I wasted time guessing names like `windows.hashdump` and `windows.hashdump.Hashdump` before realising I should just run `python vol.py -h` and search the full list. That fixed most of my command errors immediately.
 
 ### What I would do differently next time
-- **Keep tools off OneDrive.** Installing everything under `C:\Tools\` instead of the Desktop would have avoided the OneDrive sync conflicts that blocked impacket. That cost me more time than I expected.
 - **Look inside `st4G3$$1.bat`.** I confirmed it was executed but never recovered what it actually contained. I'd use `windows.filescan` and `windows.dumpfiles` next time to pull the file content directly from memory.
 - **Keep Volatility 2 around.** Some plugins like `hashdump` never made it into Volatility 3. Having both versions installed and knowing which supports which would have saved me a lot of dead ends.
 
